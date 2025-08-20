@@ -131,34 +131,39 @@
             letter-spacing: -0.5px;
         }
 
+         /* Fixed Navigation Styles */
         .nav ul {
             display: flex;
             gap: 30px;
+            list-style-type: none; /* This removes the dots */
         }
 
         .nav ul li a {
             font-weight: 500;
+            transition: color 0.3s;
             position: relative;
-            transition: all 0.3s ease;
+            color: white;
+            text-decoration: none;
         }
 
-        .nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-secondary);
-            transition: width 0.3s ease;
-        }
-
-        .nav ul li a:hover::after {
-            width: 100%;
+        .nav ul li a:hover {
+            color: var(--accent-teal);
         }
 
         .nav ul li a.active {
             color: var(--accent-teal);
+        }
+
+        .nav ul li a.active::after,
+        .nav ul li a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-secondary);
+            transition: width 0.3s ease;
         }
 
         .mobile-menu-btn {
@@ -977,4 +982,5 @@
     </script>
 </body>
 </html>
+
 
