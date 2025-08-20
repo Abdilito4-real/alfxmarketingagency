@@ -468,8 +468,10 @@
             background-clip: text;
         }
 
-        /* Footer */
+        /* Fixed Footer Styles */
         .footer {
+            background: var(--primary-blue);
+            color: white;
             padding: 80px 0 40px;
             position: relative;
         }
@@ -490,6 +492,31 @@
             background-clip: text;
             display: inline-block;
             margin-bottom: 15px;
+            text-decoration: none;
+        }
+
+        .footer-links h4, 
+        .footer-social h4,
+        .footer-newsletter h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links ul li a:hover {
+            opacity: 1;
+            color: var(--accent-teal);
         }
 
         .social-icons {
@@ -982,5 +1009,6 @@
     </script>
 </body>
 </html>
+
 
 
