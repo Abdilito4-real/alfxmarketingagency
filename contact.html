@@ -3,104 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Alf X Crypto Marketing Agency</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contact | Alf X | Start Your Web3 Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
     <style>
-        :root {
-            --primary-dark: #0A0A0A;
-            --primary-blue: #0d2b4b;
-            --accent-blue: #1a4d80;
-            --accent-gold: #d4af37;
-            --accent-teal: #2a9d8f;
-            --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
-            --gradient-secondary: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-blue) 100%);
-            --text-light: #F7FAFC;
-            --text-dark: #1A202C;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --glass-bg: rgba(13, 43, 75, 0.3);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --shadow-glow: 0 0 15px rgba(13, 43, 75, 0.5);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-dark: #050A0F;
+            --primary-blue: #0A1C2F;
+            --accent-blue: #1E4A76;
+            --accent-teal: #2A9D8F;
+            --text-light: #F8FAFE;
+            --glass-bg: rgba(10, 28, 47, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--primary-dark);
+            background: var(--primary-dark);
             color: var(--text-light);
-            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: var(--accent-teal);
-            mix-blend-mode: difference;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: transform 0.1s ease;
-        }
-
-        .cursor-follower {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--accent-teal);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            transform: translate(-50%, -50%);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            opacity: 0.5;
-        }
-
-        /* Glassmorphism and Neumorphism mix */
         .glass-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
+            backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
-            box-shadow: 
-                0 8px 32px 0 rgba(0, 0, 0, 0.36),
-                0 0 15px rgba(13, 43, 75, 0.2);
-            transition: all 0.3s ease;
+            border-radius: 28px;
         }
 
-        .neumorph-card {
-            background: var(--primary-dark);
-            border-radius: 16px;
-            box-shadow: 
-                10px 10px 20px rgba(0, 0, 0, 0.5),
-                -10px -10px 20px rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        /* Scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Container */
         .container {
-            width: 100%;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 28px;
         }
 
-        /* Header with glassmorphism effect */
         .header {
             position: fixed;
             top: 0;
@@ -108,913 +53,340 @@
             width: 100%;
             z-index: 1000;
             padding: 20px 0;
-            background: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.3s;
+            background: rgba(5, 10, 15, 0.5);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-
         .header .container {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
-
         .logo a {
             font-size: 28px;
             font-weight: 800;
-            background: var(--gradient-secondary);
+            background: linear-gradient(130deg, #FFFFFF, var(--accent-teal));
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -0.5px;
+            color: transparent;
+            text-decoration: none;
         }
-
-        .nav-cta-btn { /* Styling for the "Book a call" button in the header */
-            background: transparent; /* Make it transparent */
-            border: 2px solid var(--accent-teal); /* Add border outline */
+        .nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav ul li a {
+            color: #eef2ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        .nav ul li a:hover, .nav ul li a.active {
+            color: var(--accent-teal);
+        }
+        .nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-blue) 100%);
+            transition: width 0.3s ease;
+        }
+        .nav ul li a:hover::after, .nav ul li a.active::after {
+            width: 100%;
+        }
+        .nav-cta-btn {
+            background: transparent;
+            border: 1.5px solid var(--accent-teal);
             padding: 8px 20px;
-            border-radius: 50px;
+            border-radius: 40px;
             font-weight: 600;
-            color: white !important;
-            cursor: pointer; /* Indicate it's clickable */
-            font-size: 0.9rem;
-        }
-        .nav-cta-btn:hover {
-            box-shadow: 0 0 15px rgba(42, 157, 143, 0.4);
-            background: var(--gradient-primary); /* Fill background on hover */
-        }
-
-        /* Fixed Navigation Styles */
-.nav ul {
-    display: flex;
-    gap: 30px;
-    list-style-type: none; /* This removes the dots */
-}
-
-.nav ul li {
-    list-style: none; /* Ensures no bullet points */
-}
-
-.nav ul li a {
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
-    color: white;
-    text-decoration: none;
-}
-
-.nav ul li a:hover {
-    color: var(--accent-teal);
-}
-
-.nav ul li a.active {
-    color: var(--accent-teal);
-}
-
-.nav ul li a.active::after,
-.nav ul li a:hover::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-secondary);
-    transition: width 0.3s ease;
-}
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 24px;
+            color: white;
             cursor: pointer;
         }
-
-        /* Animated CTA button */
-        .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: var(--gradient-primary);
+        .mobile-menu-btn {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
             color: white;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            text-decoration: none;
-            font-size: 1rem;
         }
 
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-secondary);
-            z-index: -1;
-            transition: transform 0.5s ease;
-            transform: scaleX(0);
-            transform-origin: right;
-            border-radius: 50px;
-        }
-
-        .cta-button:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        .cta-button:hover {
-            box-shadow: 0 0 25px rgba(13, 43, 75, 0.6);
-            transform: translateY(-3px);
-        }
-
-        .telegram-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #0088cc;
-            color: white;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .telegram-button:hover {
-            background: #006da3;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
-        }
-
-        /* Section styling */
-        section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-secondary);
-            border-radius: 2px;
-        }
-
-        /* Contact page specific styles */
         .contact-hero {
-            height: 60vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-            /* Optimized background strategy for mobile performance */
-            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('bg.png') no-repeat center center / cover;
-        }
-
-        @media (max-width: 768px) {
-            .contact-hero {
-                height: 40vh;
-                background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('bg.png');
-            }
-        }
-
-        #candlestick-chart {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            opacity: 0.2;
-        }
-
-        .contact-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
             text-align: center;
-            margin: 0 auto;
+            padding-top: 120px;
+            background: radial-gradient(ellipse at 50% 30%, rgba(42,157,143,0.1), transparent);
         }
-
         .contact-hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.1;
-            background: linear-gradient(to right, var(--text-light) 0%, var(--accent-teal) 100%);
+            background: linear-gradient(135deg, #FFF, var(--accent-teal));
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
         }
-
         .contact-section {
-            position: relative;
-            padding: 80px 0;
+            padding: 60px 0 100px;
         }
-
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
         }
-
-        .contact-form-container {
-            padding: 40px;
-            border-radius: 20px;
-        }
-
-        .contact-form h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        .response-time {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 30px;
-            color: var(--accent-teal);
-            font-weight: 500;
-        }
-
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: var(--text-light);
         }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 1px solid var(--glass-border);
-            border-radius: 10px;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.3s;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-light);
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            color: white;
+            font-family: inherit;
+            transition: 0.2s;
         }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: var(--accent-teal);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
         }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
         .submit-button {
+            background: linear-gradient(105deg, #1E4A76, #2A9D8F);
             width: 100%;
-            padding: 15px;
-            font-size: 0.95rem;
-            background: var(--gradient-primary);
-            color: white;
+            padding: 14px;
             border: none;
-            border-radius: 10px;
+            border-radius: 40px;
             font-weight: 600;
+            color: white;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.2s;
         }
-
         .submit-button:hover {
-            background: var(--gradient-secondary);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(13, 43, 75, 0.4);
+            filter: brightness(1.05);
         }
-
-        .contact-info {
-            padding: 40px;
-            border-radius: 20px;
-        }
-
-        .contact-info h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: var(--text-light);
-        }
-
         .contact-method {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .contact-method:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .contact-method .icon {
-            font-size: 24px;
-            color: var(--accent-teal);
-            margin-bottom: 15px;
-        }
-
-        .contact-method h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--text-light);
-        }
-
-        .contact-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--accent-teal);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .contact-link:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Team section */
-        .team-section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .team-member {
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.4s ease;
+            padding: 24px;
+            border-radius: 24px;
+            background: rgba(10,28,47,0.35);
+            margin-bottom: 20px;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-glow);
-        }
-
-        .member-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid var(--accent-blue);
-        }
-
-        .member-name {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--text-light);
-        }
-
-        .member-role {
+        .contact-method .icon {
+            font-size: 2rem;
             color: var(--accent-teal);
-            margin-bottom: 15px;
-            font-weight: 500;
         }
-
-        .member-bio {
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        /* FAQ section */
-        .faq-section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .response-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(42,157,143,0.15);
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-bottom: 30px;
         }
 
         .faq-item {
-            margin-bottom: 15px;
-            border-radius: 16px;
+            background: rgba(10,28,47,0.35);
+            border-radius: 20px;
+            margin-bottom: 16px;
             overflow: hidden;
-            transition: all 0.3s ease;
         }
-
         .faq-question {
             padding: 20px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             cursor: pointer;
-            transition: background-color 0.3s;
+            font-weight: 600;
         }
-
-        .faq-question:hover {
-            background-color: rgba(13, 43, 75, 0.2);
-        }
-
-        .faq-question h3 {
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
-
-        .faq-question i {
-            transition: transform 0.3s;
-        }
-
         .faq-answer {
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
+            transition: 0.3s;
         }
-
-        .faq-item.active .faq-question {
-            background-color: rgba(13, 43, 75, 0.3);
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
         .faq-item.active .faq-answer {
-            max-height: 500px;
             padding: 0 20px 20px;
+            max-height: 300px;
         }
 
-        /* 3D floating elements */
-        .floating-element {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.3;
-            filter: blur(40px);
-            z-index: -1;
-            animation: float 15s infinite ease-in-out;
-        }
-
-        .float-1 {
-            width: 300px;
-            height: 300px;
-            background: var(--accent-blue);
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .float-2 {
-            width: 200px;
-            height: 200px;
-            background: var(--accent-teal);
-            bottom: 20%;
-            right: 10%;
-            animation-delay: -5s;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            33% {
-                transform: translateY(-30px) rotate(120deg);
-            }
-            66% {
-                transform: translateY(30px) rotate(240deg);
-            }
-        }
-
-        /* Footer */
         .footer {
-    background: var(--primary-blue);
-    color: white;
-    padding: 80px 0 40px;
-    position: relative;
-}
+            background: var(--primary-blue);
+            color: white;
+            padding: 70px 0 40px;
+            position: relative;
+        }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
 
-.footer-logo a {
-    font-size: 28px;
-    font-weight: 800;
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-    margin-bottom: 15px;
-    text-decoration: none;
-}
+        .footer-logo a {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, white, var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
 
-.footer-links h4, 
-.footer-social h4,
-.footer-newsletter h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: white;
-}
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: 0.3s;
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .social-icons a:hover {
+            background: var(--accent-teal);
+            transform: translateY(-4px);
+        }
 
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    color: white;
-    text-decoration: none;
-}
-
-.footer-links ul li a:hover {
-    opacity: 1;
-    color: var(--accent-teal);
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: white;
-}
-
-.social-icons a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-primary);
-    opacity: 0.3;
-    transition: all 0.3s ease;
-    z-index: -1;
-}
-
-.social-icons a:hover::before {
-    opacity: 1;
-}
-
-.social-icons a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(13, 43, 75, 0.4);
-    color: white;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 40px;
-    border-top: 1px solid var(--glass-border);
-    opacity: 0.7;
-}
-
-.footer-newsletter form {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.footer-newsletter input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid var(--glass-border);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-light);
-}
-
-.footer-newsletter button {
-    padding: 12px 20px;
-    background: var(--gradient-primary);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.footer-newsletter button:hover {
-    background: var(--gradient-secondary);
-    transform: translateY(-3px);
-}
-        /* Media queries */
-        @media (max-width: 992px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-hero h1 {
-                font-size: 2.8rem;
-            }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        .footer-links ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .footer-links ul li a:hover {
+            color: var(--accent-teal);
+        }
+        .footer-newsletter form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .footer-newsletter input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 40px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+        .footer-newsletter button {
+            padding: 12px 24px;
+            background: var(--accent-teal);
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .footer-newsletter button:hover {
+            background: #1f7a6f;
+            transform: translateY(-2px);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         @media (max-width: 768px) {
-              .nav ul {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: rgba(10, 10, 10, 0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-        z-index: 1000;
-        list-style-type: none; /* This removes the dots */
-    }
-    
-    .nav ul.show {
-        display: flex;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-        color: white;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        z-index: 1001;
-    }
-            
-            .contact-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-form-container, .contact-info {
-                padding: 25px;
-            }
+            .contact-hero h1 { font-size: 2.5rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            .nav ul { display: none; flex-direction: column; background: #0A1C2F; position: absolute; top: 75px; left: 0; width: 100%; padding: 20px; }
+            .nav ul.show { display: flex; }
+            .mobile-menu-btn { display: block; }
         }
-
-        @media (max-width: 576px) {
-            .contact-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .team-member {
-                padding: 20px;
-            }
-            .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-    
-    .footer-newsletter form {
-        flex-direction: column;
-    }
-}
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">Alf X</a>
-            </div>
+            <div class="logo"><a href="index.html">ALF X</a></div>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
-                    <li><button onclick="location.href='contact.html'" class="nav-cta-btn">Book a call</button></li>
+                    <li><button onclick="location.href='https://calendly.com/alfamanx01/intro-alignment-call-alf-x'" class="nav-cta-btn">Book a call</button></li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             </nav>
         </div>
     </header>
 
     <section class="contact-hero">
-        <div class="floating-element float-1"></div>
-        <div class="floating-element float-2"></div>
-        
         <div class="container">
-            <div class="contact-hero-content">
-                <h1>Let's Talk About Your Project</h1>
-                <p>Get in touch to discuss how we can help grow your Web3 project.</p>
-            </div>
+            <h1>Let's build your <br><span style="color: var(--accent-teal);">Web3 breakout</span></h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 20px auto 0;">Tell us about your project, and we'll get back within 24h with a strategic roadmap.</p>
         </div>
     </section>
 
     <section class="contact-section">
         <div class="container">
             <div class="contact-container">
-                <div class="contact-form-container glass-card">
-                    <h2>Send Us a Message</h2>
-                    <p class="response-time"><i class="fas fa-clock"></i> Response within 24 hours</p>
+                <div class="glass-card" style="padding: 40px;">
+                    <div class="response-badge"><i class="fas fa-clock"></i> Response within 24 hours</div>
+                    <h2 style="margin-bottom: 24px;">Send a message</h2>
                     <form id="contactForm" action="https://formspree.io/f/manjywrr" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="project">Project Name/URL</label>
-                            <input type="text" id="project" name="project" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="package">Interested Package</label>
-                            <select id="package" name="package">
-                                <option value="">Select an option</option>
-                                <option value="basic">Basic</option>
-                                <option value="standard">Standard</option>
-                                <option value="premium">Premium</option>
-                                <option value="custom">Custom Solution</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
+                        <div class="form-group"><label>Full name</label><input type="text" name="name" required></div>
+                        <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
+                        <div class="form-group"><label>Project name / URL</label><input type="text" name="project" required></div>
+                        <div class="form-group"><label>Interested package</label><select name="package"><option>Basic</option><option>Standard</option><option>Premium</option><option>Custom</option></select></div>
+                        <div class="form-group"><label>Message</label><textarea rows="4" name="message" required></textarea></div>
+                        <button type="submit" class="submit-button">Send inquiry <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
                     </form>
                 </div>
-
-                <div class="contact-info glass-card">
-                    <h2>Other Ways to Connect</h2>
-                    <div class="contact-method">
-                        <div class="icon"><i class="fab fa-telegram"></i></div>
-                        <h3>Telegram</h3>
-                        <p>Chat with us instantly on Telegram</p>
-                        <a href="https://t.me/alf_listing1" target="_blank" class="contact-link">@alf_listing1</a>
-                    </div>
-                    <div class="contact-method">
-                        <div class="icon"><i class="fab fa-twitter"></i></div>
-                        <h3>Twitter/X</h3>
-                        <p>DM us on Twitter for quick questions</p>
-                        <a href="https://x.com/alfx_mktg?s=21" target="_blank" class="contact-link">@AlfX_mktg</a>
-                    </div>
-                    <div class="contact-method">
-                        <div class="icon"><i class="fas fa-envelope"></i></div>
-                        <h3>Email</h3>
-                        <p>For formal inquiries and proposals</p>
-                        <a href="mailto:Alfamanx01@gmail.com" class="contact-link">Alfamanx01@gmail.com</a>
+                <div>
+                    <div class="contact-method"><div class="icon"><i class="fab fa-telegram"></i></div><div><h3>Telegram</h3><p>Fastest response — chat directly</p><a href="https://t.me/alf_listing1" style="color: var(--accent-teal);">@alf_listing1 <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i></a></div></div>
+                    <div class="contact-method"><div class="icon"><i class="fab fa-twitter"></i></div><div><h3>Twitter / X</h3><p>DM for quick questions</p><a href="https://x.com/alfx_mktg" style="color: var(--accent-teal);">@alfx_mktg <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i></a></div></div>
+                    <div class="contact-method"><div class="icon"><i class="fas fa-envelope"></i></div><div><h3>Email</h3><p>Formal proposals & partnerships</p><a href="mailto:Alfamanx01@gmail.com" style="color: var(--accent-teal);">Alfamanx01@gmail.com</a></div></div>
+                    <div class="glass-card" style="padding: 30px; margin-top: 24px; text-align: center;">
+                        <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--accent-teal); margin-bottom: 12px;"></i>
+                        <h3>Prefer a live call?</h3>
+                        <p style="margin: 12px 0;">Book a 15-min alignment session</p>
+                        <button onclick="location.href='https://calendly.com/alfamanx01/intro-alignment-call-alf-x'" style="background: transparent; border: 1.5px solid var(--accent-teal); padding: 10px 24px; border-radius: 40px; color: white; cursor: pointer;">Schedule now</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="team-section">
-        <div class="floating-element float-1"></div>
-        <div class="floating-element float-2"></div>
-        
+    <section style="padding: 0 0 100px;">
         <div class="container">
-            <h2 class="section-title">Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member glass-card">
-                    <img src="/alfredo.jpg" alt="Alfredo" class="member-image">
-                    <h3 class="member-name">Alfredo</h3>
-                    <p class="member-role">CEO/Founder</p>
-                    <p class="member-bio">Drives Alf X’s vision, execution, and overall strategy. Commands operations with precision to keep projects scaling.
-</p>
-                    <a href="https://t.me/alf_listing1" class="telegram-button" target="_blank">
-                        <i class="fab fa-telegram"></i> Contact on Telegram
-                    </a>
-                </div>
-                <div class="team-member glass-card">
-                    <img src="/aman.jpg" alt="Aman" class="member-image">
-                    <h3 class="member-name">Aman</h3>
-                    <p class="member-role">Co-Founder & Lead Strategist</p>
-                    <p class="member-bio">Architect of growth campaigns. Designs and executes strategies that transform projects into market leaders.</p>
-                    <a href="https://t.me/based_aman" class="telegram-button" target="_blank">
-                        <i class="fab fa-telegram"></i> Contact on Telegram
-                    </a>
-                </div>
-                <div class="team-member glass-card">
-                    <img src="/jacob.jpg" alt="Sarah" class="member-image">
-                    <h3 class="member-name">Jacob</h3>
-                    <p class="member-role">Market Positioning Lead and Trend Architec</p>
-                    <p class="member-bio">Specialist in listings and visibility. Secures premium placements and trending positions across top platforms.</p>
-                    <a href="https://t.me/hero_uzumaki" class="telegram-button" target="_blank">
-                        <i class="fab fa-telegram"></i> Contact on Telegram
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Common Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>How do I know this won't be a scam?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We completely understand your caution in the crypto space. We understand the skepticism Web3 has its fair share of bad actors. At Alf X, transparency and delivery are non-negotiable.</p>
-                        <p>Every campaign we run is structured with clear deliverables and milestones. We often start with small, testable executions so new clients can verify results firsthand before scaling. We've built long-term relationships by consistently delivering, not overpromising.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>How fast can I expect results?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>At Alf X, everything we do is campaign-driven not just a service drop. Our packages (Basic, Standard, and Premium) are structured into layered campaigns that target both immediate traction and long-term impact.</p>
-                        <p>For example, our Basic campaign focuses on quick exposure with listings and call posts, while our Premium campaign combines trending, mass DMs, watchlists, and Chinese lounge presence to build momentum from multiple angles. Some effects—like trending boosts or call traffic—are instant, while others—like custom DMs and Reddit waves—build gradually for sustained engagement.</p>  
-                    </div>
-                </div>
-
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>Can I start with a small test?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely. We encourage first-time clients to test our services before committing to a larger push.</p>
-                        <p>Whether it's a scaled-down version of the Basic package, a single trending campaign, article drop, or limited DM batch, we'll tailor a lite version of our service to prove our value and build confidence.</p>
-                        <p>After the test, 83% of clients upgrade to full campaigns once they see our metrics-driven approach.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>What's your typical response time?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We respond to all inquiries within 24 hours during business days. For Telegram messages, we typically reply within a few hours.</p>
-                        <p>We're active and responsive, most inquiries receive replies within minutes to an hour, depending on time zone differences.</p> 
-                        <p>Urgent campaign updates or escalations are always prioritized. We believe smooth communication is key to solid execution.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item glass-card">
-                    <div class="faq-question">
-                        <h3>Do you work with all types of crypto projects?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We're open to all innovative Web3 ideas—whether you're launching a memecoin, utility token, NFT brand, or DeFi platform.</p> 
-                        <p>However, we carefully vet each project to ensure alignment with our values and to maintain the integrity of our network. If it's legit and you're serious about growth, we're ready to build.</p>
-                    </div>
-                </div>
+            <h2 class="section-title" style="margin-bottom: 40px;">Common <span>questions</span></h2>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item"><div class="faq-question">How do I know this isn't a scam? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>We understand the skepticism. Every campaign has clear deliverables, and we often start with small testable executions so new clients verify results firsthand. Transparency is non-negotiable at Alf X.</p></div></div>
+                <div class="faq-item"><div class="faq-question">How fast can I see results? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Our campaigns are structured for both immediate traction (trending boosts, call traffic) and sustained engagement. Some effects are instant, others build gradually for long-term momentum.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Can I start with a small test? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Absolutely. We encourage first-time clients to test with a scaled-down version of our services. After the test, 83% of clients upgrade to full campaigns.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Do you work with all types of crypto projects? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>We work with innovative Web3 ideas — memecoins, utility tokens, NFT brands, DeFi. We vet each project to ensure alignment and maintain integrity.</p></div></div>
             </div>
         </div>
     </section>
@@ -1024,11 +396,11 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <a href="index.html">Alf X</a>
-                    <p>Unlocking Undiscovered Strategies</p>
+                    <p style="margin-top: 12px;">Unlocking Undiscovered Strategies</p>
                     <div class="social-icons">
                         <a href="https://t.me/Alfxmkt" target="_blank"><i class="fab fa-telegram"></i></a>
                         <a href="https://x.com/alfx_mktg?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:Alfamanx01@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:Alfamanx01@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1042,8 +414,8 @@
                 </div>
                 <div class="footer-newsletter">
                     <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for the latest in crypto marketing</p>
-                    <form class="newsletter-form">
+                    <p>Subscribe for Web3 marketing insights</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
                         <input type="email" placeholder="Your email address" required>
                         <button type="submit">Subscribe</button>
                     </form>
@@ -1056,129 +428,37 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        (function(){
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
             const navMenu = document.querySelector('.nav ul');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-            });
-            
-            // FAQ Accordion
+            if(mobileBtn && navMenu){
+                mobileBtn.addEventListener('click', (e) => { e.stopPropagation(); navMenu.classList.toggle('show'); });
+                document.addEventListener('click', (e) => { if(!navMenu.contains(e.target) && !mobileBtn.contains(e.target)) navMenu.classList.remove('show'); });
+            }
             const faqItems = document.querySelectorAll('.faq-item');
-            
             faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    item.classList.toggle('active');
-                });
+                item.querySelector('.faq-question').addEventListener('click', () => item.classList.toggle('active'));
             });
-            
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+            const form = document.getElementById('contactForm');
+            if(form){
+                form.addEventListener('submit', async (e) => {
                     e.preventDefault();
-                    
-                    // Get form values
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const project = document.getElementById('project').value;
-                    const package = document.getElementById('package').value;
-                    const message = document.getElementById('message').value;
-                    
-                    // Formspree submission
-                    const formData = new FormData(contactForm);
-                    
-                    fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            alert('Thank you! Your message has been sent. We will get back to you within 24 hours.');
-                            contactForm.reset();
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('Oops! Something went wrong. Please try again or contact us via Telegram.');
-                    });
+                    const formData = new FormData(form);
+                    try {
+                        const res = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+                        if(res.ok) { alert('Thank you! We’ll respond within 24 hours.'); form.reset(); }
+                        else throw new Error();
+                    } catch { alert('Error — please reach out via Telegram.'); }
                 });
             }
-            
-            // GSAP animations
-            gsap.registerPlugin(ScrollTrigger);
-            
-            gsap.from('.contact-hero-content', {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: "power3.out"
+            gsap.from('.contact-hero h1', { duration: 1, y: 40, opacity: 0 });
+            gsap.from('.glass-card', { duration: 0.8, y: 30, opacity: 0, stagger: 0.2, delay: 0.3 });
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.header');
+                if(window.scrollY > 50) header.style.background = 'rgba(5,10,15,0.85)';
+                else header.style.background = 'rgba(5,10,15,0.5)';
             });
-            
-            gsap.from('.contact-form-container, .contact-info', {
-                scrollTrigger: {
-                    trigger: '.contact-section',
-                    start: 'top 80%'
-                },
-                duration: 0.8,
-                y: 30,
-                opacity: 0,
-                stagger: 0.2,
-                ease: "power2.out"
-            });
-            
-            gsap.from('.team-member', {
-                scrollTrigger: {
-                    trigger: '.team-section',
-                    start: 'top 80%'
-                },
-                duration: 0.8,
-                y: 30,
-                opacity: 0,
-                stagger: 0.2,
-                ease: "power2.out"
-            });
-            
-            gsap.from('.faq-item', {
-                scrollTrigger: {
-                    trigger: '.faq-section',
-                    start: 'top 80%'
-                },
-                duration: 0.8,
-                y: 30,
-                opacity: 0,
-                stagger: 0.1,
-                ease: "power2.out"
-            });
-            
-            // Floating animation for elements
-            gsap.to('.float-1', {
-                y: 30,
-                rotation: 10,
-                duration: 5,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            });
-            
-            gsap.to('.float-2', {
-                y: -30,
-                rotation: -10,
-                duration: 6,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-                delay: 1
-            });
-        });
+        })();
     </script>
 </body>
 </html>
