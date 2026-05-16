@@ -45,32 +45,6 @@
             overflow-x: hidden;
         }
 
-        .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: var(--accent-teal);
-            mix-blend-mode: difference;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: transform 0.1s ease;
-        }
-
-        .cursor-follower {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--accent-teal);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            transform: translate(-50%, -50%);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            opacity: 0.5;
-        }
-
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -427,7 +401,7 @@
         .team-member {
             width: min(520px, 100%);
             margin: 0 auto;
-            padding: 45px 35px;
+            padding: 65px 45px;
             border-radius: 32px;
             text-align: center;
             transition: all 0.4s ease;
@@ -878,7 +852,7 @@
                 <p class="subheading">Data-driven and AI-powered strategies tailored for web3 projects to scale effectively.</p>
                 <div class="hero-btns">
                     <a href="https://calendly.com/alfamanx01/intro-alignment-call-alf-x" class="cta-button">Book a strategy call</a>
-                    <a href="#case-studies" class="cta-button-2">View case study</a>
+                    <a href="#case-studies" class="cta-button-2">View Services</a>
                 </div>
                 
                 <div class="hero-trust-bar">
@@ -916,7 +890,7 @@
     <!-- Case Studies Section -->
     <section id="case-studies" class="case-studies">
         <div class="container">
-            <h2 class="section-title">Case Studies</h2>
+            <h2 class="section-title" style="color: var(--accent-teal);">Services</h2>
             <div class="case-studies-grid">
                 <!-- Card 1 -->
                 <div class="case-card glass-card">
