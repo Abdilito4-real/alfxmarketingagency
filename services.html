@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Alf X | Start Your Web3 Journey</title>
+    <title>Services | Alf X | Web3 Marketing Capabilities</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -21,9 +21,11 @@
             --primary-blue: #0A1C2F;
             --accent-blue: #1E4A76;
             --accent-teal: #2A9D8F;
+            --accent-gold: #E9C46A;
             --text-light: #F8FAFE;
             --glass-bg: rgba(10, 28, 47, 0.45);
             --glass-border: rgba(255, 255, 255, 0.08);
+            --shadow-glow: 0 0 20px rgba(42, 157, 143, 0.2);
         }
 
         body {
@@ -31,6 +33,7 @@
             background: var(--primary-dark);
             color: var(--text-light);
             overflow-x: hidden;
+            line-height: 1.5;
         }
 
         .glass-card {
@@ -109,6 +112,7 @@
             font-weight: 600;
             color: white;
             cursor: pointer;
+            transition: 0.2s;
         }
         .mobile-menu-btn {
             display: none;
@@ -117,114 +121,171 @@
             color: white;
         }
 
-        .contact-hero {
-            min-height: 70vh;
+        /* Enhanced Services Hero */
+        .services-hero {
+            min-height: 95vh;
             display: flex;
             align-items: center;
-            text-align: center;
-            padding-top: 120px;
-            background: radial-gradient(ellipse at 50% 30%, rgba(42,157,143,0.1), transparent);
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
         }
-        .contact-hero h1 {
-            font-size: 3.8rem;
+        .hero-bg-gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(30,74,118,0.3), transparent 70%);
+        }
+        .hero-stats-badge {
+            display: inline-flex;
+            gap: 24px;
+            background: rgba(42,157,143,0.12);
+            padding: 12px 28px;
+            border-radius: 80px;
+            margin-bottom: 32px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(42,157,143,0.25);
+        }
+        .hero-stats-badge span {
+            font-weight: 600;
+        }
+        .hero-stats-badge i {
+            color: var(--accent-teal);
+            margin-right: 6px;
+        }
+        .services-hero h1 {
+            font-size: 4rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #FFF, var(--accent-teal));
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #FFF, var(--accent-teal), #7AB2E0);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 20px;
         }
-        .contact-section {
-            padding: 60px 0 100px;
-        }
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-        .form-group {
-            margin-bottom: 24px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            color: white;
-            font-family: inherit;
-            transition: 0.2s;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent-teal);
-            outline: none;
-        }
-        .submit-button {
-            background: linear-gradient(105deg, #1E4A76, #2A9D8F);
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 40px;
-            font-weight: 600;
-            color: white;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .submit-button:hover {
-            transform: translateY(-3px);
-            filter: brightness(1.05);
-        }
-        .contact-method {
-            padding: 24px;
-            border-radius: 24px;
-            background: rgba(10,28,47,0.35);
-            margin-bottom: 20px;
+        .service-tag-cloud {
             display: flex;
-            align-items: center;
-            gap: 20px;
             flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 40px;
         }
-        .contact-method .icon {
-            font-size: 2rem;
-            color: var(--accent-teal);
-        }
-        .response-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(42,157,143,0.15);
+        .service-tag {
+            background: rgba(255,255,255,0.05);
             padding: 8px 20px;
             border-radius: 40px;
-            margin-bottom: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .faq-item {
-            background: rgba(10,28,47,0.35);
-            border-radius: 20px;
-            margin-bottom: 16px;
-            overflow: hidden;
+        /* Capability sections */
+        .section {
+            padding: 90px 0;
         }
-        .faq-question {
-            padding: 20px;
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+        .section-title span {
+            background: linear-gradient(120deg, var(--accent-teal), #60a5fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Case Studies Section */
+        .case-studies {
+            background: linear-gradient(180deg, var(--primary-dark) 0%, #060b16 100%);
+            padding-bottom: 120px;
+        }
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .case-card {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            height: 100%;
+            border-radius: 24px;
+            overflow: visible;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .case-image {
+            height: 200px;
+            background: linear-gradient(45deg, rgba(13, 43, 75, 0.4), rgba(42, 157, 143, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+        }
+        .case-image i {
+            font-size: 4rem;
+            color: var(--accent-teal);
+            filter: drop-shadow(0 0 15px rgba(42, 157, 143, 0.3));
+            transition: transform 0.4s ease;
+        }
+        .case-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .case-category {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+            display: block;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        .platform-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+        }
+        .platform-tag {
+            font-size: 0.65rem;
+            padding: 4px 10px;
+            background: rgba(42, 157, 143, 0.1);
+            border: 1px solid rgba(42, 157, 143, 0.2);
+            border-radius: 20px;
+            color: var(--accent-teal);
             font-weight: 600;
         }
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: 0.3s;
+        .case-card:hover {
+            transform: translateY(-10px);
+            background: rgba(13, 43, 75, 0.4);
         }
-        .faq-item.active .faq-answer {
-            padding: 0 20px 20px;
-            max-height: 300px;
+        .case-card:hover .case-image i {
+            transform: scale(1.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(105deg, #1E4A76, #2A9D8F);
+            padding: 14px 38px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.25s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.05);
         }
 
         .footer {
@@ -317,11 +378,12 @@
         }
 
         @media (max-width: 768px) {
-            .contact-hero h1 { font-size: 2.5rem; }
-            .contact-container { grid-template-columns: 1fr; }
+            .services-hero h1 { font-size: 2.5rem; }
             .nav ul { display: none; flex-direction: column; background: #0A1C2F; position: absolute; top: 75px; left: 0; width: 100%; padding: 20px; }
             .nav ul.show { display: flex; }
             .mobile-menu-btn { display: block; }
+            .hero-stats-badge { flex-direction: column; gap: 8px; text-align: center; }
+            .capability-header { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -332,9 +394,9 @@
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><button onclick="location.href='https://calendly.com/alfamanx01/intro-alignment-call-alf-x'" class="nav-cta-btn">Book a call</button></li>
                 </ul>
                 <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
@@ -342,51 +404,135 @@
         </div>
     </header>
 
-    <section class="contact-hero">
-        <div class="container">
-            <h1>Let's build your <br><span style="color: var(--accent-teal);">Web3 breakout</span></h1>
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 20px auto 0;">Tell us about your project, and we'll get back within 24h with a strategic roadmap.</p>
+    <section class="services-hero">
+        <div class="hero-bg-gradient"></div>
+        <div class="container" style="position: relative; z-index: 2; text-align: center;">
+            <div class="hero-stats-badge">
+                <span><i class="fas fa-rocket"></i> 50+ Projects Scaled</span>
+                <span><i class="fas fa-users"></i> 200+ KOL Network</span>
+                <span><i class="fas fa-chart-line"></i> 10M+ Impressions</span>
+            </div>
+            <h1>Precision instruments for<br>Web3 <span style="color: var(--accent-teal);">market dominance</span></h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.85;">Not just exposure, engineered momentum. From trending takeovers to authority PR, we deploy the exact firepower your project needs.</p>
+            <div class="service-tag-cloud">
+                <span class="service-tag"><i class="fas fa-fire"></i> Trending Rockets</span>
+                <span class="service-tag"><i class="fas fa-chart-line"></i> CMC/CG Listings</span>
+                <span class="service-tag"><i class="fas fa-bullseye"></i> KOL Campaigns</span>
+                <span class="service-tag"><i class="fas fa-newspaper"></i> Yahoo Finance PR</span>
+                <span class="service-tag"><i class="fas fa-gem"></i> Community Raids</span>
+                <span class="service-tag"><i class="fas fa-globe-asia"></i> Chinese Lounges</span>
+            </div>
         </div>
     </section>
 
-    <section class="contact-section">
+    <section id="case-studies" class="case-studies section">
         <div class="container">
-            <div class="contact-container">
-                <div class="glass-card" style="padding: 40px;">
-                    <div class="response-badge"><i class="fas fa-clock"></i> Response within 24 hours</div>
-                    <h2 style="margin-bottom: 24px;">Send a message</h2>
-                    <form id="contactForm" action="https://formspree.io/f/manjywrr" method="POST">
-                        <div class="form-group"><label>Full name</label><input type="text" name="name" required></div>
-                        <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
-                        <div class="form-group"><label>Project name / URL</label><input type="text" name="project" required></div>
-                        <div class="form-group"><label>Interested package</label><select name="package"><option>Basic</option><option>Standard</option><option>Premium</option><option>Custom</option></select></div>
-                        <div class="form-group"><label>Message</label><textarea rows="4" name="message" required></textarea></div>
-                        <button type="submit" class="submit-button">Send inquiry <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
-                    </form>
+            <h2 class="section-title"><span>Services</span></h2>
+            <div class="case-studies-grid">
+                <!-- Card 1 -->
+                <div class="case-card glass-card">
+                    <div class="case-image"><i class="fas fa-chart-line"></i></div>
+                    <div class="case-content">
+                        <span class="case-category">Trendings & Visibility</span>
+                        <p>Aggregator trendings engineered to maximize market attention, chart discovery, and ecosystem visibility.</p>
+                        <div class="platform-tags">
+                            <span class="platform-tag">OKX</span>
+                            <span class="platform-tag">Binance</span>
+                            <span class="platform-tag">Dexscreener</span>
+                            <span class="platform-tag">Phantom</span>
+                            <span class="platform-tag">Birdeye</span>
+                            <span class="platform-tag">Bitget</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="contact-method"><div class="icon"><i class="fab fa-telegram"></i></div><div><h3>Telegram</h3><p>Fastest response, chat directly</p><a href="https://t.me/alf_listing1" style="color: var(--accent-teal);">@alf_listing1 <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i></a></div></div>
-                    <div class="contact-method"><div class="icon"><i class="fab fa-twitter"></i></div><div><h3>Twitter / X</h3><p>DM for quick questions</p><a href="https://x.com/alfx_mktg" style="color: var(--accent-teal);">@alfx_mktg <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i></a></div></div>
-                    <div class="contact-method"><div class="icon"><i class="fas fa-envelope"></i></div><div><h3>Email</h3><p>Formal proposals & partnerships</p><a href="mailto:Alfamanx01@gmail.com" style="color: var(--accent-teal);">Alfamanx01@gmail.com</a></div></div>
-                    <div class="glass-card" style="padding: 30px; margin-top: 24px; text-align: center;">
-                        <i class="fas fa-calendar-alt" style="font-size: 2rem; color: var(--accent-teal); margin-bottom: 12px;"></i>
-                        <h3>Prefer a live call?</h3>
-                        <p style="margin: 12px 0;">Book a 15-min alignment session</p>
-                        <button onclick="location.href='https://calendly.com/alfamanx01/intro-alignment-call-alf-x'" style="background: transparent; border: 1.5px solid var(--accent-teal); padding: 10px 24px; border-radius: 40px; color: white; cursor: pointer;">Schedule now</button>
+                <!-- Card 2 -->
+                <div class="case-card glass-card">
+                    <div class="case-image"><i class="fas fa-bullhorn"></i></div>
+                    <div class="case-content">
+                        <span class="case-category">Media & Narrative Distribution</span>
+                        <p>High-impact article placement and Press Releases across major crypto media ecosystems to build brand trust.</p>
+                        <div class="platform-tags">
+                            <span class="platform-tag">TradingView</span>
+                            <span class="platform-tag">Bitcoin.com</span>
+                            <span class="platform-tag">HTX</span>
+                            <span class="platform-tag">MEXC</span>
+                            <span class="platform-tag">CoinMarketCap</span>
+                            <span class="platform-tag">4chan</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="case-card glass-card">
+                    <div class="case-image"><i class="fas fa-list-check"></i></div>
+                    <div class="case-content">
+                        <span class="case-category">Discovery & Listing</span>
+                        <p>Top listings on aggregators and tracking ecosystems designed to maximize token discoverability.</p>
+                        <div class="platform-tags">
+                            <span class="platform-tag">Jupiter</span>
+                            <span class="platform-tag">CoinGecko</span>
+                            <span class="platform-tag">Bitget Wallet</span>
+                            <span class="platform-tag">OKX Wallet</span>
+                            <span class="platform-tag">Gem Hub</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="case-card glass-card">
+                    <div class="case-image"><i class="fas fa-earth-asia"></i></div>
+                    <div class="case-content">
+                        <span class="case-category">Regional Market Expansion</span>
+                        <p>Localized exposure strategies tailored for globally active regions and specific trader ecosystems.</p>
+                        <div class="platform-tags">
+                            <span class="platform-tag">Japan Trending</span>
+                            <span class="platform-tag">EU Penetration</span>
+                            <span class="platform-tag">Dutch Trending</span>
+                            <span class="platform-tag">Regional KOLs</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="case-card glass-card">
+                    <div class="case-image"><i class="fas fa-comments"></i></div>
+                    <div class="case-content">
+                        <span class="case-category">KOL & Social Penetration</span>
+                        <p>Coordinated influencer activations targeting high-intent crypto audiences across social platforms.</p>
+                        <div class="platform-tags">
+                            <span class="platform-tag">Binance KOLs</span>
+                            <span class="platform-tag">Twitter (X)</span>
+                            <span class="platform-tag">Reddit Posts</span>
+                            <span class="platform-tag">YouTube Promo</span>
+                            <span class="platform-tag">Web3 Guru</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="case-card glass-card">
+                    <div class="case-image"><i class="fas fa-dragon"></i></div>
+                    <div class="case-content">
+                        <span class="case-category"> Chinese Market</span>
+                        <p>Full-scale marketing designed to position projects directly within high-activity Chinese crypto circles.</p>
+                        <div class="platform-tags">
+                            <span class="platform-tag">Weibo Placements</span>
+                            <span class="platform-tag">CN Lounges</span>
+                            <span class="platform-tag">Buystep</span>
+                            <span class="platform-tag">CN Listings</span>
+                            <span class="platform-tag">Community Management</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 0 0 100px;">
+    <section style="padding: 60px 0 100px;">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 40px;">Common <span>questions</span></h2>
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item"><div class="faq-question">How do I know this isn't a scam? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>We understand the skepticism. Every campaign has clear deliverables, and we often start with small testable executions so new clients verify results firsthand. Transparency is non-negotiable at Alf X.</p></div></div>
-                <div class="faq-item"><div class="faq-question">How fast can I see results? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Our campaigns are structured for both immediate traction (trending boosts, call traffic) and sustained engagement. Some effects are instant, others build gradually for long-term momentum.</p></div></div>
-                <div class="faq-item"><div class="faq-question">Can I start with a small test? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Absolutely. We encourage first-time clients to test with a scaled-down version of our services. After the test, 83% of clients upgrade to full campaigns.</p></div></div>
-                <div class="faq-item"><div class="faq-question">Do you work with all types of crypto projects? <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>We work with innovative Web3 ideas, memecoins, utility tokens, NFT brands, DeFi. We vet each project to ensure alignment and maintain integrity.</p></div></div>
+            <div class="glass-card" style="padding: 60px 40px; text-align: center;">
+                <h2 style="font-size: 2rem;">Ready for a tailored strategy?</h2>
+                <p style="margin: 20px auto; max-width: 550px;">Get the full package breakdown and personalized execution roadmap.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
+                    <a href="contact.html" class="btn-primary">Discuss your project</a>
+                    <a href="https://t.me/Alfxmkt" target="_blank" style="background: transparent; border: 1.5px solid var(--accent-teal); padding: 12px 34px; border-radius: 50px; color: white; text-decoration: none;">Telegram Hub <i class="fab fa-telegram"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -435,24 +581,13 @@
                 mobileBtn.addEventListener('click', (e) => { e.stopPropagation(); navMenu.classList.toggle('show'); });
                 document.addEventListener('click', (e) => { if(!navMenu.contains(e.target) && !mobileBtn.contains(e.target)) navMenu.classList.remove('show'); });
             }
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                item.querySelector('.faq-question').addEventListener('click', () => item.classList.toggle('active'));
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.from('.services-hero .hero-stats-badge', { duration: 0.8, y: -30, opacity: 0 });
+            gsap.from('.services-hero h1', { duration: 1, y: 40, opacity: 0, delay: 0.2 });
+            gsap.from('.service-tag', { duration: 0.6, scale: 0.8, opacity: 0, stagger: 0.05, delay: 0.4 });
+            gsap.utils.toArray('.case-card').forEach(card => {
+                gsap.from(card, { scrollTrigger: { trigger: card, start: "top 88%" }, duration: 0.6, y: 30, opacity: 0 });
             });
-            const form = document.getElementById('contactForm');
-            if(form){
-                form.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    const formData = new FormData(form);
-                    try {
-                        const res = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
-                        if(res.ok) { alert('Thank you! We’ll respond within 24 hours.'); form.reset(); }
-                        else throw new Error();
-                    } catch { alert('Error, please reach out via Telegram.'); }
-                });
-            }
-            gsap.from('.contact-hero h1', { duration: 1, y: 40, opacity: 0 });
-            gsap.from('.glass-card', { duration: 0.8, y: 30, opacity: 0, stagger: 0.2, delay: 0.3 });
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('.header');
                 if(window.scrollY > 50) header.style.background = 'rgba(5,10,15,0.85)';
